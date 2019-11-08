@@ -1,7 +1,6 @@
 <?php
 include('conn.php');
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -128,8 +127,7 @@ include('conn.php');
                     }else{
                       $disp="Unknown";
                     }
-
-
+                    
                     ?>
 
                     <tr>
