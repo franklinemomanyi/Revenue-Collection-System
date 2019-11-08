@@ -1,9 +1,7 @@
 <?php
 date_default_timezone_set("Africa/Nairobi");
 $postData = file_get_contents('php://input');
-$jsonData = json_decode($postData, true);
-  
-file_put_contents('myfile.json', $jsonData);               
+$jsonData = json_decode($postData, true);          
                 
 
 // This uses a sample validation URL set with the "validate" query keyword e.g.
@@ -37,13 +35,7 @@ if(array_key_exists("validate", $_GET))
         return;
     }
     
-    // print_r($mpesaTransID);
-    // echo "\n";
-    // print_r($accountRef);
-    // echo "\n";
-    // print_r($senderPhoneNumber);
-    // echo "\n";
-    // print_r($transactionType);
+   
 }
 else
 {
@@ -64,10 +56,9 @@ else
 //save to DB and other stuff
     if(file_put_contents('login_data.json', $jsonData))  
     {  
-      
-         require 'connect.php';
-        
         // Create connection
+         require 'connect.php';    
+      
          
         
         // Check connection
@@ -105,13 +96,6 @@ else
     	}
         
         
-    }  
-    // print_r($mpesaTransID);
-    // echo "\n";
-    // print_r($accountRef);
-    // echo "\n";
-    // print_r($senderPhoneNumber);
-    // echo "\n";
-    // print_r($transactionType);
+    }      
 }
 ?>
