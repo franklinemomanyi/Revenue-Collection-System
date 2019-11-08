@@ -11,7 +11,6 @@
         <a href="/Revenue/pages/mailbox/compose.php" class="nav-link">Contact</a>
       </li>
     </ul>
-
     <!-- SEARCH FORM -->
     <form class="navbar-nav ml-auto">
       <div class="input-group input-group-sm">
