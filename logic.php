@@ -2,9 +2,6 @@
 $query="SELECT * FROM BUSSTYPE";
 $result=mysqli_query($conn,$query);
 
-
-
-
 function suspend()
 {
 //$frank=$row['0'];
