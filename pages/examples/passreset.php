@@ -66,28 +66,47 @@ if (mysqli_num_rows($result)==1) {
     
 
 	if(!$mail->send()) {
-		echo '<script type="text/javascript">';
-        echo 'alert("Message could not be sent.");';
-        echo 'window.location="/Revenue/pages/examples/forgot.html";';
-        echo '</script>';
-	    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    
+		 echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System",
+                            text: "Message could not be sent!",
+                            icon: "error",
+                            button: "Okay"}).then(function(){
+                               window.location="/Revenue/pages/examples/forgot.html";
+                               });
+               
+            </script>';
+    
 	} else {
 
         if (mysqli_query($conn,$sql1)) {
         	# code...
-        	echo '<script type="text/javascript">';
-	        echo 'alert("A Password Reset link has been sent to your email");';
-	        echo 'window.location="/Revenue/pages/examples/login.html";';
-	        echo '</script>';
+        	echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System",
+                            text: "A Password Reset link has been sent to your email",
+                            icon: "success",
+                            button: "Okay"}).then(function(){
+                               window.location="/Revenue/pages/examples/login.html";
+                               });
+               
+                </script>';
         }
 	   
 	}
 
 }else{
-    echo '<script type="text/javascript">';
-    echo 'alert("Please enter a valid email adress");';
-    echo 'window.location="/Revenue/pages/examples/forgot.html";';
-    echo '</script>';
+    echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System",
+                            text: "Please enter a valid email adress!",
+                            icon: "error",
+                            button: "Okay"}).then(function(){
+                               window.location="/Revenue/pages/examples/forgot.html";
+                               });
+               
+                </script>';
 }
 
 ?>
