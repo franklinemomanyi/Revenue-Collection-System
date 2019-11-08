@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <?php
+     require('../../sweetalert.php');
+  ?>
+</head>
+<body>
+
+
 <?php
 include('connect.php');
 
@@ -82,6 +93,7 @@ if (mysqli_num_rows($result)==1) {
 ?>
 
 
-
+</body>
+</html>
 
 
