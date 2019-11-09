@@ -36,10 +36,16 @@ if ($password === $password1) {
                 </script>';
 		
 	}else {
-	    echo '<script type="text/javascript">';
-		echo 'alert("Server Error");';
-    	echo 'window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/newpassword.html";';
-    	echo '</script>';
+	   echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System!",
+                            text: "Server Error",
+                            icon: "error",
+                            button: "Okay"}).then(function(){
+                               window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/newpassword.html";
+                               });
+               
+                </script>';
 	}
 }else{
 	echo '<script type="text/javascript">';
