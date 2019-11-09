@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <?php
+     require('../../sweetalert.php');
+  ?>
+</head>
+<body>
+
 <?php
 
 include('connect.php');
@@ -35,5 +45,5 @@ if ($password === $password1) {
 $conn->close();
 ?>
 
-
-
+</body>
+</html>
