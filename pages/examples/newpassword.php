@@ -112,11 +112,16 @@
 
 <?php 
 }else{
-      echo '<script type="text/javascript">';
-      echo 'alert("Password Reset link has expired");';
-      echo 'window.location="/Revenue/pages/examples/login.html";';
-      echo '</script>';
-
+      echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System!",
+                            text: "Password Reset link has expired",
+                            icon: "error",
+                            button: "Okay"}).then(function(){
+                               window.location="/Revenue/pages/examples/login.html";
+                               });
+               
+                </script>';
 }
 } else{
     echo '<script type="text/javascript">';
