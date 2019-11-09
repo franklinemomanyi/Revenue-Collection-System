@@ -48,10 +48,16 @@ if ($password === $password1) {
                 </script>';
 	}
 }else{
-	echo '<script type="text/javascript">';
-	echo 'alert("Passwords dont match");';
-    echo 'window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/newpassword.html";';
-    echo '</script>';
+	echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System!",
+                            text: "Passwords dont match",
+                            icon: "error",
+                            button: "Okay"}).then(function(){
+                               window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/newpassword.html";
+                               });
+               
+                </script>';
 }
 
 $conn->close();
