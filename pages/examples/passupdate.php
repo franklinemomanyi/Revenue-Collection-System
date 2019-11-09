@@ -24,10 +24,16 @@ $sql = "UPDATE USER SET PASSWORD='$NPassword' WHERE EMAIL='$email'";
 if ($password === $password1) {
 	if ($conn->query($sql) === TRUE) {
 		
-			echo '<script type="text/javascript">';
-			echo 'alert("Password Successfully Updated");';
-	    	echo 'window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/login.html";';
-	    	echo '</script>';
+			echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System!",
+                            text: "Password Successfully Updated",
+                            icon: "success",
+                            button: "Okay"}).then(function(){
+                               window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/login.html";
+                               });
+               
+                </script>';
 		
 	}else {
 	    echo '<script type="text/javascript">';
