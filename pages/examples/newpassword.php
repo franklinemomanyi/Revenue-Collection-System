@@ -124,10 +124,16 @@
                 </script>';
 }
 } else{
-    echo '<script type="text/javascript">';
-    echo 'alert("Invalid Token");';
-    echo 'window.location="/Revenue/pages/examples/login.html";';
-    echo '</script>';
+    echo '<script type="text/javascript">
+                swal({
+                            title: "Revenue Collection System!",
+                            text: "Invalid Token",
+                            icon: "error",
+                            button: "Okay"}).then(function(){
+                               window.location="/Revenue/pages/examples/login.html";
+                               });
+               
+                </script>';
 }
 
 ?>
