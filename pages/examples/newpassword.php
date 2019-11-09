@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <?php
+     require('../../sweetalert.php');
+  ?>
+</head>
+<body>
 <?php
     $token=$_GET['token'];
     $email=$_GET['email'];
@@ -118,3 +127,5 @@
 
 ?>
 
+</body>
+</html>
