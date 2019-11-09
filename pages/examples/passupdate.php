@@ -42,7 +42,7 @@ if ($password === $password1) {
                             text: "Server Error",
                             icon: "error",
                             button: "Okay"}).then(function(){
-                               window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/newpassword.html";
+                               window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/login.html";
                                });
                
                 </script>';
@@ -54,7 +54,7 @@ if ($password === $password1) {
                             text: "Passwords dont match",
                             icon: "error",
                             button: "Okay"}).then(function(){
-                               window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/newpassword.html";
+                               window.location="http://www.nelfixcomputers.co.ke/Revenue/pages/examples/login.html";
                                });
                
                 </script>';
