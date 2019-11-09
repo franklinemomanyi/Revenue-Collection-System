@@ -1,3 +1,6 @@
+<?php
+      require('../../conn.php');
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +14,7 @@
 <?php
     $idnum=$_GET['idnum'];
     $amount=$_GET['amount'];
-    require('../../conn.php');
+   
     $sql="SELECT TAX FROM BUSINESS WHERE ACCOUNT='$idnum'";
     $results=mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($results);
