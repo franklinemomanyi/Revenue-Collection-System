@@ -23,7 +23,9 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
+
   <!-- Navbar -->
+
   <?php
     require('../../nav.php');
   ?>
