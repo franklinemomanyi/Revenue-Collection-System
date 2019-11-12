@@ -79,7 +79,6 @@
 
                 <ul class="list-group list-group-unbordered mb-3">
                   
-                  
                 </ul>
 
                 <a href="/Revenue/pages/mailbox/compose.php" class="btn btn-primary btn-block"><b>Follow</b></a>
@@ -168,7 +167,9 @@
     </section>
     <!-- /.content -->
   </div>
+  
   <!-- /.content-wrapper -->
+  
   <?php
     require('../../footer.php');
   ?>
