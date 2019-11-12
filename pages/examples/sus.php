@@ -8,6 +8,7 @@ $suspend=mysqli_query($conn,"UPDATE USER
 	WHERE USERID='$bid'
 	");
 
+
 if ($suspend==true) {
 ?>
 <script type="text/javascript">
@@ -16,6 +17,5 @@ window.top.location.reload();
 </script>
 <?php
 }
-
 
 ?>
