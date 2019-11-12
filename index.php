@@ -885,5 +885,7 @@ $barow12 =mysqli_fetch_array($bares12);
     })
   })
 </script>
+
+<?php require 'web_accesibility.php';?>
 </body>
 </html>
