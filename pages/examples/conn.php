@@ -1,9 +1,10 @@
 <?php
-
+ 
+require '../../web_accesibility.php';
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname = "revenue";
+$password = "12345";
+$dbname = "revenue2";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
