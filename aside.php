@@ -40,7 +40,6 @@
                 </a>
               </li>
               <?php } ?>
-              
 
               <?php if ($_SESSION['domain'] == '0') { ?>
                   <li class="nav-item">
@@ -270,11 +269,7 @@
           </li>
           
           
-          
-         
-          
-          
-          
+            
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
