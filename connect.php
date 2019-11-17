@@ -17,3 +17,4 @@ if ($conn->connect_error) {
 ?>
 
 <link rel="shortcut icon" href="../../dist/img/icon.png" type="image/x-icon">
+

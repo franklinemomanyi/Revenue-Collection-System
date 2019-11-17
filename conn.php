@@ -22,3 +22,4 @@ header("Location: /Revenue/pages/examples/login.html");
 
 ?>
 <link rel="shortcut icon" href="../../dist/img/icon.png" type="image/x-icon">
+
