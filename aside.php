@@ -242,6 +242,34 @@
             </ul>
             
           </li>
+          
+          
+          <?php if ($_SESSION['domain'] == '0') { ?>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-sms"></i>
+              <p>
+                SMS
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/Revenue/pages/mailbox/composesms.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Compose</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/Revenue/pages/mailbox/sms.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sent</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <?php }?>
+          
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
