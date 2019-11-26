@@ -28,7 +28,7 @@ $result=mysqli_query($conn,$query);
 
 
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyBbQvUzMljIxDUIRNAa3CYJr3l4jeVyQKs"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?language=en&key= API &libraries=geometry"></script>
 
 
             <script type="text/javascript">
@@ -44,6 +44,11 @@ $result=mysqli_query($conn,$query);
                 mapTypeId: google.maps.MapTypeId.ROADMAP
               }
               var map = new google.maps.Map(document.getElementById("map-canvas"), options);
+
+
+            //map.data.addGeoJson('polygon.geojson');
+   
+
               var html = "<table class='table table-borderless'>" +
                          "<tr><td class='form-control'>Name:</td> <td><input type='text' class='form-control' id='name'/> </td> </tr>" +
                          "<tr><td class='form-control'>Address:</td> <td><input type='text' class='form-control' id='address'/></td> </tr>" +
@@ -68,16 +73,15 @@ $result=mysqli_query($conn,$query);
                   });
               });
 
-                // Info window content
-                /*
-                var infoWindowContent = [
-                ['<div class="info_content">' +
-                '<h3><?php //echo $row['NAME'] ;?></h3>' +
-                '<p><?php //echo $row['NAME']; ?></p>' + '</div>'],    
-                ];
-                */
 
              
+
+            // Set zoom level
+            var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+                this.setZoom(10);
+                google.maps.event.removeListener(boundsListener);
+            });
+
             }
 
             function saveData() {
