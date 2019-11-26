@@ -72,9 +72,38 @@ $result=mysqli_query($conn,$query);
                     infowindow.open(map, markernew);
                   });
               });
-
-
-             
+            // load geo-positions from server side script
+            var map;
+             var bounds = new google.maps.LatLngBounds();
+             //Carry out an Ajax request.
+             var infoWindow = new google.maps.InfoWindow(), marker, i;
+                $.ajax({
+                    url: 'mapgetlocation.php',
+                    success:function(data){
+                        //console.log(data);
+                        //Loop through each location.
+                      var i = 0;
+                        $.each(data, function(){
+                          i++;
+                          var name = this.NAME;
+                            //Plot the location as a marker
+                             var pos = new google.maps.LatLng(this.LAT, this.LNG); 
+                             bounds.extend(pos);
+                             marker =  new google.maps.Marker({
+                                  position: pos,                          
+                                  map: map,
+                                  title: name
+                              });
+                            map.fitBounds(bounds);
+                             google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                             return function() {
+                        infoWindow.setContent('<div class="info_content"> <p>'+  name + '</p></div>');
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));        
+                        });
+                    }
+                });             
 
             // Set zoom level
             var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
