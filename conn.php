@@ -4,7 +4,7 @@ require 'web_accesibility.php';
 $servername = "localhost";
 $username = "root";
 $password = "12345";
- $dbname = "revenue2";
+$dbname = "revenue2";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,4 +22,3 @@ header("Location: /Revenue/pages/examples/login.html");
 
 ?>
 <link rel="shortcut icon" href="../../dist/img/icon.png" type="image/x-icon">
-
