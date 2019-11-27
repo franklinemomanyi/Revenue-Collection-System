@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Register JSON data for report template</title>
+
+    <!-- Stimusloft Reports.JS -->
+    
+    <link href="css/stimulsoft.viewer.office2013.css" rel="stylesheet">
+
+    <script src="scripts/stimulsoft.reports.js" type="text/javascript"></script>
+
+    <script src="scripts/stimulsoft.viewer.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+
+    <script type="text/javascript">
+        // Create a new report instance
+        var report = new Stimulsoft.Report.StiReport();
+        // Load report from url
+        report.loadFile("Business_List.mrt");
+
+        // Create new DataSet object
+        var dataSet = new Stimulsoft.System.Data.DataSet("Demo");
+        // Load JSON data file from specified URL to the DataSet object
+        dataSet.readJsonFile("bss.json");
+        // Remove all connections from the report template
+        report.dictionary.databases.clear();
+        // Register DataSet object
+        report.regData("Demo", "Demo", dataSet);
+        // Render report with registered data
+        var viewer = new Stimulsoft.Viewer.StiViewer();                        
+
+       viewer.report = report;
+       // viewer.renderHtml();
+        
+    </script>
+</body>
+
+</html>
