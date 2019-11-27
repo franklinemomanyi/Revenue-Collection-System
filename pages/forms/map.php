@@ -97,7 +97,7 @@ $result=mysqli_query($conn,$query);
                             map.fitBounds(bounds);
                              google.maps.event.addListener(marker, 'click', (function(marker, i) {
                              return function() {
-                        infoWindow.setContent('<div class="info_content"> <p>'+  name + '</p></div>');
+                        infoWindow.setContent('<div class="info_content"> <h3>'+  name + '</p></h3>');
                         infoWindow.open(map, marker);
                     }
                 })(marker, i));        
