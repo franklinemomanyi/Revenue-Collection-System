@@ -16,7 +16,7 @@ include('conn.php');
   <!-- IonIcons -->
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/Adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -53,7 +53,7 @@ to get the desired effect
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Admin Line Graph.</h1>
+            <h1 class="m-0 text-dark">Bettip Line Graph.</h1>
           </div><!-- /.col -->
          
         </div><!-- /.row -->
@@ -72,7 +72,7 @@ to get the desired effect
               <div class="card-body">
                 <div class="d-flex">
                   <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">Admin Statistics</span>
+                    <span class="text-bold text-lg">Bettip Statistics</span>
                     <span>Frankline O. Momanyi</span>
                   </p>
                   <!-- <p class="ml-auto d-flex flex-column text-right">
@@ -137,7 +137,7 @@ to get the desired effect
 <!-- Bootstrap -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE -->
-<script src="dist/js/Adminlte.js"></script>
+<script src="dist/js/adminlte.js"></script>
 
 <!-- OPTIONAL SCRIPTS -->
 <script src="plugins/chart.js/javascript.js"></script>
