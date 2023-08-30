@@ -31,7 +31,7 @@ require('../../conn.php');
     $curl_post_data = array(
             //Fill in the request parameters with valid values
             'partnerID' =>356,
-            'apikey' => 'xxxxxxxxxxxxxxxxxx',
+            'apikey' => 'xxxxxxxxxxxxxxxxx',
             'mobile' => '254'.$pnumber,
             'message' => $sms,
             'shortcode' => 'INFOTEXT',
