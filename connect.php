@@ -3,8 +3,8 @@
 require 'web_accesibility.php';
 $servername = "localhost";
 $username = "root";
-$password = "12345";
- $dbname = "revenue2";
+$password = "";
+$dbname = "revenue";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,9 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-
-
 ?>
 
-<link rel="shortcut icon" href="../../dist/img/icon.png" type="image/x-icon">
 
+<link rel="shortcut icon" href="../../dist/img/icon.png" type="image/x-icon">
